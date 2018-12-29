@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#008299"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+      <ScrollView
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/page1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:id="@+id/txt1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="15dp"
+                            android:paddingLeft="5dp"
+                            android:text="공원 소개"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/txt1_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="공원 정보"
+                            android:textColor="#003399"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <WebView
+                        android:id="@+id/wv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <WebView
+                        android:id="@+id/wv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </ScrollView>
+     
+                <ScrollView
+                    android:id="@+id/tab4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/btn3_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn"
+                                android:text="시설 보기" />
+
+                            <Button
+                                android:id="@+id/btn3_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn"
+                                android:text="배달 음식 보기" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                                android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:id="@+id/ll"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/chicken"
+                                    android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn"
+                                    android:text="치킨"
+                                    android:visibility="gone" />
+
+                                <Button
+                                    android:id="@+id/pizza"
+                                    android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn"
+                                    android:text="피자"
+                                    android:visibility="gone" />
+
+                                <Button
+                                    android:id="@+id/jjajang"
+                                    android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn"
+                                    android:text="중국집"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <ListView
+                                android:id="@+id/list"
+                                android:layout_width="fill_parent"
+                                android:layout_height="400dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/tab5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/list2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <WebView
+                        android:id="@+id/wv4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

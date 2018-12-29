@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.open_api"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="한강공원 놀러가자"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.open_api.Main01_FirstMain"
+            android:label="한강공원 놀러가자" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.open_api.Main02_SecondMain"/>
+        <activity android:name="com.example.open_api.Main03_Park01_List"/>
+        <activity android:name="com.example.open_api.Main03_Park02_Inform"/>
+        <activity android:name="com.example.open_api.Main03_Map01"/>
+       <activity android:name="com.example.open_api.AlertMessage"/>     
+        <activity android:name="com.example.open_api.Main03_Fac02_Map"/>
+         <activity android:name="com.example.open_api.test1_autocompletview" />
+         <activity android:name="com.example.open_api.Main03_Like01" />
+         <activity android:name="com.example.open_api.Main03_Park03_FacDetail" />
+         <activity android:name="com.example.open_api.Main03_Fac01" />
+    </application>
+
+</manifest>
